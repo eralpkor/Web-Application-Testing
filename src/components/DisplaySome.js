@@ -5,7 +5,6 @@ export default function DisplaySome(props) {
     <div>
       <div>Strikes: {props.strikes}</div>
       <div>Balls: {props.balls}</div>
-
     </div>
   )
 }

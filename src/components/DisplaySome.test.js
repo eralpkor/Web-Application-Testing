@@ -4,6 +4,10 @@ import DisplaySome from './DisplaySome';
 
 describe('Display something from DisplaySome', () => {
   it('should render...', () => {
-    render(<DisplaySome />)
+    render(<DisplaySome />);
+  });
+  it('should check props...', () => {
+    const value = render(<DisplaySome strikes={2}/>)
+    value.getByText(/Strikes: 5/i);
   })
 });
