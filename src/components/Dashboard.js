@@ -3,8 +3,8 @@ import React from "react";
 export default function Dashboard(props) {
   const { balls, strikes, setStrikes, setBalls } = props;
 
-  function handleStrike(num) {
-    if (strikes < 3 || num < 4) {
+  function handleStrike() {
+    if (strikes < 3) {
       setStrikes(strikes + 1);
     } else {
       setStrikes(0);
@@ -12,15 +12,22 @@ export default function Dashboard(props) {
     }
   }
   function handleBalls() {
-    
+    if (balls < 4) {
+      setBalls(balls + 1);
+    } else {
+      setBalls(0);
+      setStrikes(0);
+    }
   }
   return (
     <div className="buttons">
       <div>
-        <button onClick={() => handleStrike(balls)}>Strikes</button>
+        <button onClick={handleStrike}
+        >Strikes
+        </button>
       </div>
       <div>
-        <button onClick={() => setBalls(balls + 1) || handleStrike}>
+        <button onClick={handleBalls}>
           Balls
         </button>
       </div>
