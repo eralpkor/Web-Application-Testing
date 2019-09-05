@@ -1,13 +1,17 @@
 import React from 'react';
 import { render } from '@testing-library/react';
-import DisplaySome from './DisplaySome';
+import Display from './Display';
 
 describe('Display something from DisplaySome', () => {
   it('should render...', () => {
-    render(<DisplaySome />);
+    render(<Display />);
   });
   it('should check props...', () => {
-    const value = render(<DisplaySome strikes={2}/>)
-    value.getByText(/Strikes: 5/i);
+    const value = render(<Display strikes={5} balls={1} />)
+    value.getByText(/Strikes: 5/);
+    value.getByText(/Balls: 1/);
+
   })
 });
+
+

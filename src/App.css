@@ -1,5 +1,7 @@
 .App {
   text-align: center;
+  width: 80%;
+  margin: 0 auto;
 }
 
 .App-logo {
@@ -30,4 +32,23 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+button {
+  background: lightblue;
+  border: 1px solid lightblue;
+  width: 100px;
+  height: 30px;
+  border-radius: 5px;
+  margin: 10px;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  align-items: space-between;
 }
